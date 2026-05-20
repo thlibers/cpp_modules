@@ -5,7 +5,7 @@
 #include <iostream>
 #include <iomanip>
 #include <limits>
-#include "PhoneBook.hpp"
+#include <string>
 
 class Contact
 {
@@ -18,11 +18,11 @@ private:
 public:
 	Contact();
 	~Contact();
-	void setFirstName(std::string &value);
-	void setLastName(std::string &value);
-	void setNickName(std::string &value);
-	void setPhoneNumber(std::string &value);
-	void setDarkestSecret(std::string &value);
+	void setFirstName(std::string value);
+	void setLastName(std::string value);
+	void setNickName(std::string value);
+	void setPhoneNumber(std::string value);
+	void setDarkestSecret(std::string value);
 	std::string getFirstName() const;
 	std::string getLastName() const;
 	std::string getNickName() const;

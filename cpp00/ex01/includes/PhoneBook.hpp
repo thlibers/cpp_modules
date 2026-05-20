@@ -5,13 +5,15 @@
 #include <iostream>
 #include <iomanip>
 #include <limits>
+#include <string>
 #include "Contact.hpp"
 
 class PhoneBook
 {
 private:
-	Contact contact[8] ;
-	int		index;
+	Contact _contact[8] ;
+	int		_index;
+	int		_count;
 public:
 	PhoneBook();
 	~PhoneBook();

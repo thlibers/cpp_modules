@@ -1,4 +1,6 @@
-#include "../includes/PhoneBook.hpp"
+#include "../includes/Contact.hpp"
+
+// 'this' est un pointeur vers la class actuelle.
 
 Contact::Contact()
 {
@@ -10,27 +12,27 @@ Contact::~Contact()
 	// std::cout << "destructor called" << std::endl;
 }
 
-void Contact::setFirstName(std::string &value)
+void Contact::setFirstName(std::string value)
 {
 	this->_firstName = value;
 }
 
-void Contact::setLastName(std::string &value)
+void Contact::setLastName(std::string value)
 {
 	this->_lastName = value;
 }
 
-void Contact::setNickName(std::string &value)
+void Contact::setNickName(std::string value)
 {
 	this->_nickName = value;
 }
 
-void Contact::setPhoneNumber(std::string &value)
+void Contact::setPhoneNumber(std::string value)
 {
 	this->_phoneNumber = value;
 }
 
-void Contact::setDarkestSecret(std::string &value)
+void Contact::setDarkestSecret(std::string value)
 {
 	this->_darkestSecret = value;
 }
