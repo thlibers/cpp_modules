@@ -1,15 +1,15 @@
-NAME = megaphone
-SOURCES = Megaphone.cpp
+NAME = Zombie
+SOURCES = sources/main.cpp sources/newZombie.cpp sources/randomChump.cpp sources/Zombie.cpp
 
-OBJECTS = $(SOURCES:.cpp=.o)
+OBJECTS = $(SOURCES:%.cpp=%.o)
 
-CFLAGS = -Wall -Wextra -Werror -std=c++98
+CFLAGS = -Wall -Wextra -Werror -g3 -std=c++98
 RM = rm -f
 CC = c++
 
 %.o: %.cpp
 	$(CC) $(CFLAGS) -c $< -o $@
-
+ 
 all: $(NAME)
 $(NAME): $(OBJECTS)
 	$(CC) $(CFLAGS) -o $(NAME) $(OBJECTS)
