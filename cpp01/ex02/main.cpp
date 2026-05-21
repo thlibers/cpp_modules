@@ -16,3 +16,9 @@ int main()
 	std::cout << stringREF << std::endl;
 	return 0;
 }
+
+//	une reference a plusieurs points positifs :
+//	- pas besoin de dereferencer.
+//	- Meme adresse memoire que la variable referencee.
+//	- Ne peut pas etre mis a NULL.
+//	- Pas d'enchainement de reference. (exemple ****ptr)
