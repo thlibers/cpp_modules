@@ -1,5 +1,5 @@
-NAME = a.out
-SOURCES = sources/main.cpp sources/harl.cpp
+NAME = harl
+SOURCES = sources/main.cpp sources/Harl.cpp
 
 OBJECTS = $(SOURCES:%.cpp=%.o)
 
