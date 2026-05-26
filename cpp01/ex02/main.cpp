@@ -22,3 +22,4 @@ int main()
 //	- Meme adresse memoire que la variable referencee.
 //	- Ne peut pas etre mis a NULL.
 //	- Pas d'enchainement de reference. (exemple ****ptr)
+//	- Ne fait pas de copie de la valeur (si la reference est modifiee la valeur l'est aussi)
