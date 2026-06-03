@@ -20,6 +20,6 @@ int main()
 //	une reference a plusieurs points positifs :
 //	- pas besoin de dereferencer.
 //	- Meme adresse memoire que la variable referencee.
+//		Ne fait pas de copie de la valeur (si la reference est modifiee la valeur l'est aussi)
 //	- Ne peut pas etre mis a NULL.
 //	- Pas d'enchainement de reference. (exemple ****ptr)
-//	- Ne fait pas de copie de la valeur (si la reference est modifiee la valeur l'est aussi)

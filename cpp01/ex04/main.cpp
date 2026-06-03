@@ -5,13 +5,14 @@
 int main(int ac, char **av)
 {
 	std::string line;
-	std::string s1 = av[2];
-	std::string s2 = av[3];
-
 	if (ac != 4)
 		return 1;
+	std::string s1 = av[2];
+	std::string s2 = av[3];
 	std::ifstream readFile(av[1]);
 	if (readFile.fail())
+		return 1;
+	if (s1.empty() && s2.empty())
 		return 1;
 	std::ofstream newfile("ytennah.txt", std::ios::trunc);
 	if (newfile.fail())
