@@ -1,9 +1,9 @@
-#include "../includes/ClapTrap.hpp"
+#include "../includes/ScavTrap.hpp"
 
 int main()
 {
-	ClapTrap	a("yderridj");
-	ClapTrap	b("ytennah");
+	ScavTrap	a("yderridj");
+	ScavTrap	b("ytennah");
 
 	a.attack("ytennah");
 	b.takeDamage(3);
@@ -12,6 +12,9 @@ int main()
 	b.attack("yderridj");
 	a.takeDamage(5);
 	a.beRepaired(4);
+
+	a.guardGate();
+	b.guardGate();
 
 	return (0);
 }

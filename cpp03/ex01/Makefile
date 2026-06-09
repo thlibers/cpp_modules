@@ -1,5 +1,5 @@
 NAME = a.out
-SOURCES = sources/main.cpp sources/ClapTrap.cpp
+SOURCES = sources/main.cpp sources/ClapTrap.cpp sources/ScavTrap.cpp
 
 OBJECTS = $(SOURCES:%.cpp=%.o)
 
