@@ -28,5 +28,23 @@ int main()
 
 	delete(wmeta);
 	delete(w);
+
+	const int n = 4;
+	Animal* animals[n];
+	for (int i = 0; i < n; i++)
+	{
+		if (i < n / 2)
+			animals[i] = new Dog();
+		else
+			animals[i] = new Cat();
+	}
+	for (int i = 0; i < n; i++)
+	{
+		std::cout << animals[i]->getType() << " " << std::endl;
+		animals[i]->makeSound();
+	}
+	for (int i = 0; i < n; i++)
+		delete animals[i];
+
 	return 0;
 }

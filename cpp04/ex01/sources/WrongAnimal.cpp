@@ -10,15 +10,15 @@ WrongAnimal::~WrongAnimal()
     std::cout << "WrongAnimal destructor called" << std::endl;
 }
 
-WrongAnimal::WrongAnimal(const WrongAnimal &cpy) : _type(cpy._type)
+WrongAnimal::WrongAnimal(const WrongAnimal &Cpy) : _type(Cpy._type)
 {
     std::cout << "WrongAnimal copy constructor called" << std::endl;
 }
 
-WrongAnimal &WrongAnimal::operator=(const WrongAnimal &cpy)
+WrongAnimal &WrongAnimal::operator=(const WrongAnimal &Cpy)
 {
-    if (this != &cpy)
-        this->_type = cpy._type;
+    if (this != &Cpy)
+        this->_type = Cpy._type;
     std::cout << "WrongAnimal copy assignement constructor called" << std::endl;
     return (*this);
 }
