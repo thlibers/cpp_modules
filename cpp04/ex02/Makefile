@@ -1,0 +1,25 @@
+NAME = Animal
+SOURCES = sources/main.cpp sources/AAnimal.cpp sources/Cat.cpp sources/Dog.cpp sources/WrongAnimal.cpp sources/WrongCat.cpp sources/Brain.cpp
+
+OBJECTS = $(SOURCES:%.cpp=%.o)
+
+CFLAGS = -Wall -Wextra -Werror -g3 -std=c++98
+RM = rm -f
+CC = c++
+
+%.o: %.cpp
+	$(CC) $(CFLAGS) -c $< -o $@
+ 
+all: $(NAME)
+$(NAME): $(OBJECTS)
+	$(CC) $(CFLAGS) -o $(NAME) $(OBJECTS)
+
+clean:
+	$(RM) $(OBJECTS)
+
+fclean: clean
+	$(RM) $(NAME)
+
+re: fclean all
+
+.PHONY: all clean fclean re
