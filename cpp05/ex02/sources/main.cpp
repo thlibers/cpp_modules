@@ -1,102 +1,50 @@
 #include "../includes/Bureaucrat.hpp"
-#include "../includes/Form.hpp"
+#include "../includes/AForm.hpp"
+#include "../includes/ShrubberyCreationForm.hpp"
+#include "../includes/RobotomyRequestForm.hpp"
+#include "../includes/PresidentialPardonForm.hpp"
 
 int main(void)
 {
-	// try{
-	// 	Bureaucrat Bureaucrat("thlibers", 0);
-	// }
-	// catch(const std::exception &e)
-	// {
-	// 	std::cout << e.what() << std::endl;
-	// }
+	try
+	{
+		Bureaucrat jhauvill("jhauvill", 150);
+		Bureaucrat marcheva("marcheva", 40);
+		Bureaucrat thlibers("thlibers", 1);
 
-	// try{
-	// 	Bureaucrat Bureaucrat("ytennah", 1);
-	// 	std::cout << Bureaucrat << "\n";
-	// }
-	// catch(const std::exception &e)
-	// {
-	// 	std::cout << e.what() << std::endl;
-	// }
+		ShrubberyCreationForm shrubbery("ytennah");
+		RobotomyRequestForm robotomy("mlaval");
+		PresidentialPardonForm pardon("aandreo");
 
-	// try{
-	// 	Bureaucrat Bureaucrat("nclavel", 3);
-	// 	std::cout << Bureaucrat << "\n";
-	// }
-	// catch(const std::exception &e)
-	// {
-	// 	std::cout << e.what() << '\n';
-	// }
-	
-	// try{
-	// 	Bureaucrat Bureaucrat("nithomas", 10);
-	// 	std::cout << Bureaucrat << "\n";
-	// 	Bureaucrat.Increment();
-	// 	std::cout << Bureaucrat << "\n";
-	// }
-	// catch(const std::exception &e)
-	// {
-	// 	std::cout << e.what() << "\n";
-	// }
+		std::cout << jhauvill << std::endl;
+		std::cout << marcheva << std::endl;
+		std::cout << thlibers << std::endl;
+		std::cout << shrubbery << std::endl;
+		std::cout << robotomy << std::endl;
+		std::cout << pardon << std::endl;
 
-	// try{
-	// 	Bureaucrat Bureaucrat("hkeromn", 13);
-	// 	std::cout << Bureaucrat << "\n";
-	// }
-	// catch(const std::exception &e)
-	// {
-	// 	std::cout << e.what() << "\n";
-	// }
+		jhauvill.signForm(shrubbery);
+		marcheva.signForm(shrubbery);
+		thlibers.signForm(robotomy);
+		thlibers.signForm(pardon);
 
-	// try{
-	// 	Bureaucrat Bureaucrat("yderridj", 99);
-	// 	std::cout << Bureaucrat << "\n";
-	// 	Bureaucrat.Decrement();
-	// 	std::cout << Bureaucrat << "\n";
-	// }
-	// catch(const std::exception &e)
-	// {
-	// 	std::cout << e.what() << "\n";
-	// }
+		jhauvill.executeForm(shrubbery);
+		marcheva.executeForm(shrubbery);
+		thlibers.executeForm(shrubbery);
 
-	// try{
-	// 	Bureaucrat Bureaucrat("sbonneau", 150);
-	// 	std::cout << Bureaucrat << "\n";
-	// 	Bureaucrat.Decrement();
-	// 	std::cout << Bureaucrat << "\n";
-	// }
-	// catch(const std::exception &e)
-	// {
-	// 	std::cout << e.what() << "\n";
-	// }
+		jhauvill.executeForm(robotomy);
+		thlibers.executeForm(robotomy);
 
-	// try{
-	// 	Bureaucrat Bureaucrat("jhauvill", 10000);
-	// }
-	// catch(const std::exception &e)
-	// {
-	// 	std::cout << e.what() << "\n";
-	// }
+		marcheva.executeForm(pardon);
+		thlibers.executeForm(pardon);
 
-	try{
-		Form form1("Contract 1", 42, 24);
-		Form form2("Contract 2", 5, 1);
-		Bureaucrat Bureaucrat1("jhauvill", 100);
-		Bureaucrat Bureaucrat2("thlibers", 1);
-		std::cout << form1 << '\n';
-		Bureaucrat1.signForm(form1);
-		Bureaucrat2.signForm(form1);
-		std::cout << form1 << '\n';
-		std::cout << form2 << '\n';
-		Bureaucrat1.signForm(form2);
-		Bureaucrat2.signForm(form2);
-		std::cout << form2 << '\n';
+		std::cout << shrubbery << std::endl;
+		std::cout << robotomy << std::endl;
+		std::cout << pardon << std::endl;
 	}
 	catch (const std::exception &e)
 	{
-		std::cout << e.what() << '\n';
+		std::cout << e.what() << std::endl;
 	}
-
 	return 0;
 }

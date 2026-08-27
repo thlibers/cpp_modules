@@ -1,5 +1,5 @@
 NAME = Bureaucrat
-SOURCES = sources/main.cpp sources/Bureaucrat.cpp sources/Form.cpp
+SOURCES = sources/main.cpp sources/Bureaucrat.cpp sources/AForm.cpp sources/PresidentialPardonForm.cpp sources/RobotomyRequestForm.cpp sources/ShrubberyCreationForm.cpp
 
 OBJECTS = $(SOURCES:%.cpp=%.o)
 
