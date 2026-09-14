@@ -1,7 +1,7 @@
-NAME = Scalar
-SOURCES = sources/main.cpp
+NAME = convert
+SOURCES = main.cpp ScalarConverter.cpp
 
-OBJECTS = $(SOURCES:%.cpp=%.o)
+OBJECTS = $(SOURCES:.cpp=.o)
 
 CFLAGS = -Wall -Wextra -Werror -g3 -std=c++98
 RM = rm -f
