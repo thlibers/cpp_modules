@@ -1,22 +1,32 @@
-#include "whatever.hpp"
+#include "iter.hpp"
 
-int main(void) 
+void printMultNum(int &value)
 {
-	int a = 2;
-	int b = 3;
+	std::cout << value << " ";
+	value *= 2;
+}
 
-	::swap(a, b);
-	std::cout << "a = " << a << ", b = " << b << std::endl;
-	std::cout << "min(a, b) = " << ::min(a, b) << std::endl;
-	std::cout << "max(a, b) = " << ::max(a, b) << std::endl;
+void printInt(const int &value)
+{
+	std::cout << value << " ";
+}
 
-	std::string c = "chaine1";
-	std::string d = "chaine2";
+void printString(const std::string &value)
+{
+	std::cout << value << " ";
+}
 
-	::swap(c, d);
-	std::cout << "c = " << c << ", d = " << d << std::endl;
-	std::cout << "min(c, d) = " << ::min(c, d) << std::endl;
-	std::cout << "max(c, d) = " << ::max(c, d) << std::endl;
+int main(void)
+{
+	int numbers[] = {1, 2, 3, 4, 5};
+	std::string words[] = {"aaa", "bbb", "cccc"};
 
-	return 0;
+	::iter(numbers, 5, printMultNum);
+	std::cout << std::endl;
+	::iter(numbers, 5, printInt);
+	std::cout << std::endl;
+	::iter(words, 3, printString);
+	std::cout << std::endl;
+
+	return (0);
 }

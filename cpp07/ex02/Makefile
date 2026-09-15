@@ -1,4 +1,4 @@
-NAME = iter
+NAME = array
 SOURCES = main.cpp
 
 OBJECTS = $(SOURCES:.cpp=.o)
