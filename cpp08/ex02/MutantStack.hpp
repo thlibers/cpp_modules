@@ -38,32 +38,32 @@ public:
 		return (this->c.end());
 	}
 
-	const_iterator begin(void) const
+	iterator begin(void) const
 	{
 		return (this->c.begin());
 	}
 
-	const_iterator end(void) const
+	iterator end(void) const
 	{
 		return (this->c.end());
 	}
 
-	reverse_iterator rbegin(void)
+	iterator rbegin(void)
 	{
 		return (this->c.rbegin());
 	}
 
-	reverse_iterator rend(void)
+	iterator rend(void)
 	{
 		return (this->c.rend());
 	}
 
-	const_reverse_iterator rbegin(void) const
+	iterator rbegin(void) const
 	{
 		return (this->c.rbegin());
 	}
 
-	const_reverse_iterator rend(void) const
+	iterator rend(void) const
 	{
 		return (this->c.rend());
 	}
