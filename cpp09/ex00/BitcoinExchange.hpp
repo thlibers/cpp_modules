@@ -10,6 +10,10 @@
 # include <cerrno>
 # include <iomanip>
 
+std::string trim(const std::string &input);
+bool isValidDate(const std::string &date);
+bool isValidInputValue(const std::string &valueStr, double &value);
+
 class BitcoinExchange
 {
 private:

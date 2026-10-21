@@ -8,7 +8,7 @@
 # include <cstdlib>
 # include <stdexcept>
 
-class RPN
+class RPN				//	Reverse Polish Notation
 {
 public:
 	RPN();

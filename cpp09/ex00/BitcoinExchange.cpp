@@ -1,6 +1,6 @@
 #include "BitcoinExchange.hpp"
 
-static std::string trim(const std::string &input)
+std::string trim(const std::string &input)
 {
 	std::string::size_type start = 0;
 	std::string::size_type end = input.size();
@@ -12,7 +12,7 @@ static std::string trim(const std::string &input)
 	return input.substr(start, end - start);
 }
 
-static bool isValidDate(const std::string &date)
+bool isValidDate(const std::string &date)
 {
 	if (date.size() != 10)
 		return false;
@@ -47,6 +47,20 @@ static bool isValidDate(const std::string &date)
 		maxDay = leap ? 29 : 28;
 	}
 	return day <= maxDay;
+}
+
+bool isValidInputValue(const std::string &valueStr, double &value)
+{
+	if (valueStr.empty())
+		return false;
+	char *end = NULL;
+	errno = 0;
+	value = std::strtod(valueStr.c_str(), &end);
+	if (end == valueStr.c_str() || *end != '\0' || errno == ERANGE)
+		return false;
+	if (value < 0.0 || value > 1000.0)
+		return false;
+	return true;
 }
 
 BitcoinExchange::BitcoinExchange()
